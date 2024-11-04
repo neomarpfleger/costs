@@ -21,7 +21,7 @@ function Projects() {
 
     useEffect(() => {
         setTimeout(() => {
-            fetch('https://db-json-inky.vercel.app/', {
+            fetch('https://db-json-inky.vercel.app/projects/', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ function Projects() {
     }, [])
 
     function removeProject(id) {
-        fetch(`https://db-json-inky.vercel.app/${id}`, {
+        fetch(`https://db-json-inky.vercel.app/projects/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

@@ -10,7 +10,7 @@ function NewProject() {
         project.cost = 0;
         project.services = [];
 
-        fetch("http://localhost:5000/projects", {
+        fetch("https://db-json-inky.vercel.app/categorias/", {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',

@@ -21,7 +21,7 @@ function Project() {
 
     useEffect(() => {
         setTimeout(() => {
-            fetch(`https://db-json-inky.vercel.app/${id}`, {
+            fetch(`https://db-json-inky.vercel.app/projects/${id}`, {
                 method:'GET',
                 headers: {
                     'content-type':'application/json',
@@ -44,7 +44,7 @@ function Project() {
             return false
         }
 
-        fetch(`https://db-json-inky.vercel.app/${id}`, {
+        fetch(`https://db-json-inky.vercel.app/projects/${id}`, {
             method:'PATCH',
             headers: {
                 'content-type':'application/json',
@@ -84,7 +84,7 @@ function Project() {
         //add service cost to project total cost
         project.cost = newCost
 
-        fetch(`https://db-json-inky.vercel.app/${project.id}`, {
+        fetch(`https://db-json-inky.vercel.app/projects/${project.id}`, {
             method:'PATCH',
             headers: {
                 'content-type':'application/json',
@@ -107,7 +107,7 @@ function Project() {
         projectUpdated.services = serviceUpdated
         projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost)
         
-        fetch(`https://db-json-inky.vercel.app/${projectUpdated.id}`, {
+        fetch(`https://db-json-inky.vercel.app/projects/${projectUpdated.id}`, {
             method:'PATCH',
             headers: {
                 'content-type':'application/json',
