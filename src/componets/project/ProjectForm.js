@@ -10,7 +10,7 @@ function ProjectForm( {handleSubmit, btnText, projectData} ) {
     const [project, setProject] = useState(projectData || {})
 
     useEffect(() =>{
-        fetch("https://db-json-inky.vercel.app/", {
+        fetch("https://db-json-inky.vercel.app/categorias", {
             method: "GET",
             headers: {
                 'Content-type': 'application/json'
