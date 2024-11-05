@@ -1,5 +1,7 @@
 .home_container {
-    width: 100%;
+    width: 100vw;
+    max-width: 1200px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,4 +28,11 @@
 .home_container img {
     width: 400px;
     margin: 2em 0;
+}
+
+@media (max-width: 380px) {
+
+    .home_container img {
+        width: 100px;
+    }
 }
