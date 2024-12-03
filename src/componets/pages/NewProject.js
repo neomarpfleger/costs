@@ -16,6 +16,7 @@ function NewProject() {
                 'Content-type': 'application/json',
             },
             body: JSON.stringify(project),
+            redirect: 'follow',
         })
         .then((resp) => resp.json())
         .then((data) => {
